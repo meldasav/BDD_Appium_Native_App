@@ -14,7 +14,6 @@ public class DesiredCapabilitiesUtils {
 
     private static AndroidDriver<AndroidElement> androidDriver;
 
-
     /**
      * This method sets up DesiredCapabilities
      * for Android Emulator, Appium Server and mobile application
@@ -36,7 +35,6 @@ public class DesiredCapabilitiesUtils {
         }
         return androidDriver;
     }
-
 
     public static void quitDriver() {
         if (androidDriver != null) {
