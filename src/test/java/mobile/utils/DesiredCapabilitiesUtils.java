@@ -29,7 +29,7 @@ public class DesiredCapabilitiesUtils {
             desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
             desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
             desiredCapabilities.setCapability("app", appFile.getAbsolutePath()); // absolute path not content root
-            URL appiumServerUrl = new URL("http://0.0.0.0:4723/wd/hub"); // server url comes in here
+            URL appiumServerUrl = new URL("http://127.0.0.1:4723/wd/hub"); // server url comes in here
             androidDriver = new AndroidDriver<>(appiumServerUrl, desiredCapabilities);
             androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
