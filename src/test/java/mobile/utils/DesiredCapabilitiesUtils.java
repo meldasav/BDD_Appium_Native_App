@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class DesiredCapabilitiesUtils {
 
     private static AndroidDriver<AndroidElement> androidDriver;
-    private static WebDriver webDriver;
+
 
     /**
      * This method sets up DesiredCapabilities
@@ -42,9 +42,6 @@ public class DesiredCapabilitiesUtils {
         if (androidDriver != null) {
             androidDriver.quit();
             androidDriver = null;
-        } else if (webDriver != null) {
-            webDriver.quit();
-            webDriver = null;
         }
     }
 }
