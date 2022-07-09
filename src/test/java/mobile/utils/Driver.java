@@ -2,7 +2,6 @@ package mobile.utils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -10,7 +9,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class DesiredCapabilitiesUtils {
+public class Driver {
+
+    private Driver(){
+
+    }
 
     private static AndroidDriver<AndroidElement> androidDriver;
 
@@ -22,7 +25,7 @@ public class DesiredCapabilitiesUtils {
      * @throws MalformedURLException
      */
 
-    public static AndroidDriver<AndroidElement> setupAndroidDesiredCapabilities() throws MalformedURLException {
+    public static AndroidDriver<AndroidElement> getDriver() throws MalformedURLException {
         if (androidDriver == null) {
             File appFile = new File(ConfigReader.getProperty("apkAppPath")); //stores the app path
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); // setting up the mobile device with below values
